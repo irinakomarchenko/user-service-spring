@@ -1,24 +1,25 @@
-![CI](https://github.com/irinakomarchenko/user-service/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/irinakomarchenko/user-service-spring/actions/workflows/ci.yml/badge.svg)
 
-[![Maintainability](https://qlty.sh/badges/f7eb7ba9-446f-4494-bc5f-7b165347b5d1/maintainability.svg)](https://qlty.sh/gh/irinakomarchenko/projects/user-service)
+[![Maintainability](https://qlty.sh/badges/a56c7491-b9be-4239-964a-541250c083e3/maintainability.svg)](https://qlty.sh/gh/irinakomarchenko/projects/user-service-spring)
 
-# User Service 
+# User Service Spring
 
-**User Service** — консольное Java-приложение для управления пользователями с помощью Hibernate и PostgreSQL.  
-Реализованы основные CRUD-операции (создание, чтение, обновление, удаление) через удобное меню.
+**User Service Spring** — REST API-сервис на Spring Boot для управления пользователями (CRUD).
 
 ---
 
 ## Технологии
 
 - Java 22
-- Hibernate ORM
-- PostgreSQL (через Docker)
+- Spring Boot
+- Spring Web (REST API)
+- Spring Data JPA (встроенный Hibernate)
+- PostgreSQL (через Docker Compose)
 - SLF4J + Logback (логирование)
-- JUnit 5 (тестирование)
+- JUnit 5 + MockMvc (тестирование контроллеров и API)
 - Maven (сборка и зависимости)
 - Checkstyle (проверка стиля кода)
-
+- Lombok — (автогенерации геттеров/сеттеров)
 ---
 
 ## Запуск проекта
@@ -54,9 +55,9 @@ mvn verify
 
 
 ```sh
-mvn exec:java -Dexec.mainClass="myuserservice.App"
+mvn clean package
+java -jar target/user-service-spring.jar
 ```
 
 ### 7. Пример работы приложения
 ![img_1.png](readme-resources/img_1.png)
-![img_2.png](readme-resources/img_2.png)
