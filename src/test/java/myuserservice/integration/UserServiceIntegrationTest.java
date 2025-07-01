@@ -1,6 +1,5 @@
 package myuserservice.integration;
 
-import myuserservice.dto.UserDto;
 import myuserservice.repository.UserRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
